@@ -1059,20 +1059,20 @@ export const hymns: Hymn[] = [
       nd: "1. Thokozani, siyakukhonza, \nThixo wenkazimlo lothando; \nInhliziyo zethu ziyavuleka, \nNjengezimbali elangeni...",
     },
   },
-  // {
-  //   id: "24",
-  //   number: 24,
-  //   title: {
-  //     en: "Praise to the Lord, the Almighty",
-  //     sn: "RUMBIDZAI ISHE SAMASIMBA",
-  //     nd: "DUMISANI INKOSI ELAMANDLA",
-  //   },
-  //   lyrics: {
-  //     en: "Praise to the Lord, the Almighty...",
-  //     sn: "1. Rumbidzai Ishe Samasimba, Mambo wechisiko! \n Mweya wangu, rumbidza Iye, ndiyo poniso yako...",
-  //     nd: "1. Dumisani iNkosi elamandla, iNkosi yendalo! \n Mphefumlo wami, mdumise, uyinsindiso yakho...",
-  //   },
-  // },
+  {
+    id: "24",
+    number: 24,
+    title: {
+      en: "Praise to the Lord, the Almighty",
+      sn: "RUMBIDZAI ISHE SAMASIMBA",
+      nd: "DUMISANI INKOSI ELAMANDLA",
+    },
+    lyrics: {
+      en: "Praise to the Lord, the Almighty...",
+      sn: "1. Rumbidzai Ishe Samasimba, Mambo wechisiko! \n Mweya wangu, rumbidza Iye, ndiyo poniso yako...",
+      nd: "1. Dumisani iNkosi elamandla, iNkosi yendalo! \n Mphefumlo wami, mdumise, uyinsindiso yakho...",
+    },
+  },
   {
     id: "25",
     number: 25,

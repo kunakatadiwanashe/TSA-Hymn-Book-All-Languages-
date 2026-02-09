@@ -1,9 +1,10 @@
-import { View, Text, FlatList, TextInput, TouchableOpacity } from "react-native";
-import { useContext, useState } from "react";
 import { router } from "expo-router";
-import { hymns } from "../data/hymn";
-import { LanguageContext } from "../context/LanguageContext";
+import { useContext, useState } from "react";
+import { FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import { LanguageContext } from "../context/LanguageContext";
+import { hymns } from "../data/hymn";
+import { Ionicons } from '@expo/vector-icons';
 
 export default function HomeScreen() {
   const { language } = useContext(LanguageContext)!;
@@ -17,16 +18,22 @@ export default function HomeScreen() {
   );
 
   return (
-    <View style={{ padding: 15 }}>
-      <LanguageSwitcher />
-      <TouchableOpacity
-        onPress={() => router.push("/favorites")}
-        style={{ marginVertical: 10, padding: 10, backgroundColor: '#ddd', borderRadius: 5 }}
-      >
-        <Text style={{ fontSize: 18, textAlign: 'center' }}>
-          {language === 'en' ? 'Favorites' : language === 'sn' ? 'Zvandinofarira' : 'Othandiweyo'}
-        </Text>
-      </TouchableOpacity>
+    <View style={{ flex: 1, padding: 15 }}>
+
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <LanguageSwitcher />
+        <TouchableOpacity
+          onPress={() => router.push("/favorites")}
+          style={{
+            marginVertical: 10,
+            padding: 10,
+            alignSelf: 'center'
+          }}
+        >
+          <Ionicons name="heart-outline" size={28} color="red" />
+        </TouchableOpacity>
+      </View>
+
       <TextInput
         placeholder="Search hymn..."
         value={query}

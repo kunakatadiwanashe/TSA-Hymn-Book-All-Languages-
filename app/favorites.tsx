@@ -1,5 +1,5 @@
-import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { useContext } from "react";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { FavoritesContext } from "../context/FavoriteContext";
 import { LanguageContext } from "../context/LanguageContext";
 import { hymns } from "../data/hymn";
@@ -11,7 +11,7 @@ export default function FavoritesScreen({ navigation }) {
   const favHymns = hymns.filter(h => favorites.includes(h.id));
 
   return (
-    <View style={{ padding: 15 }}>
+    <View style={{ flex: 1, padding: 15 }}>
       <FlatList
         data={favHymns}
         keyExtractor={item => item.id}

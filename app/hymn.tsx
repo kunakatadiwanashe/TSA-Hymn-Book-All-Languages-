@@ -13,7 +13,7 @@ export default function HymnScreen() {
   const isFav = favorites.includes(hymn.id);
 
   return (
-    <ScrollView style={{ padding: 15 }}>
+    <ScrollView style={{ flex: 1, padding: 15 }}>
       <Text style={{ fontSize: 22, fontWeight: "bold" }}>
         {hymn.number}. {hymn.title[language]}
       </Text>
