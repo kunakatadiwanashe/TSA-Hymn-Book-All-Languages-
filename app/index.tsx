@@ -19,6 +19,14 @@ export default function HomeScreen() {
   return (
     <View style={{ padding: 15 }}>
       <LanguageSwitcher />
+      <TouchableOpacity
+        onPress={() => router.push("/favorites")}
+        style={{ marginVertical: 10, padding: 10, backgroundColor: '#ddd', borderRadius: 5 }}
+      >
+        <Text style={{ fontSize: 18, textAlign: 'center' }}>
+          {language === 'en' ? 'Favorites' : language === 'sn' ? 'Zvandinofarira' : 'Othandiweyo'}
+        </Text>
+      </TouchableOpacity>
       <TextInput
         placeholder="Search hymn..."
         value={query}
