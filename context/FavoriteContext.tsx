@@ -2,14 +2,14 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { createContext, useEffect, useState } from "react";
 
 interface FavoritesContextType {
-  favorites: number[];
-  toggleFavorite: (id: number) => Promise<void>;
+  favorites: string[];
+  toggleFavorite: (id: string) => Promise<void>;
 }
 
 export const FavoritesContext = createContext<FavoritesContextType | undefined>(undefined);
 
 export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [favorites, setFavorites] = useState<number[]>([]);
+  const [favorites, setFavorites] = useState<string[]>([]);
 
   useEffect(() => {
     AsyncStorage.getItem("favorites").then(data => {
@@ -17,7 +17,7 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     });
   }, []);
 
-  const toggleFavorite = async (id: number) => {
+  const toggleFavorite = async (id: string) => {
     const updated = favorites.includes(id)
       ? favorites.filter(f => f !== id)
       : [...favorites, id];
