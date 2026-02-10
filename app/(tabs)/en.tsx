@@ -8,7 +8,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 import { hymns } from "../../data/hymn";
 import { useThemeColor } from "../../hooks/use-theme-color";
 
-export default function HomeScreen() {
+export default function EnScreen() {
   const { language } = useContext(LanguageContext)!;
   const [query, setQuery] = useState("");
 
@@ -37,9 +37,6 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </ThemedView>
 
-
-
-
       <FlatList
         data={filtered}
         keyExtractor={item => item.id}
@@ -54,39 +51,26 @@ export default function HomeScreen() {
           </TouchableOpacity>
         )}
       />
-
-
-
-
-
-
-
     </ThemedView>
   );
 }
-
-
-
-
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
-    borderRadius: 50, // Creates the pill shape
+    borderRadius: 50,
     paddingLeft: 20,
     paddingRight: 5,
     marginVertical: 10,
     height: 55,
-    // Shadow for iOS
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    // Elevation for Android
     elevation: 3,
-    outline: 'none', // Removes the default outline on focus
+    outline: 'none',
   },
   input: {
     flex: 1,
@@ -97,7 +81,6 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     borderRadius: 25,
-    // This creates the purple/blue gradient look from your image
     backgroundColor: '#4A00E0',
     justifyContent: 'center',
     alignItems: 'center',
